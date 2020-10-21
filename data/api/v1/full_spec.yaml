@@ -1424,6 +1424,9 @@ components:
           description: 'The body of the event. Limited to 4000 characters. The text
             supports markdown.
 
+            To use markdown in the event text, start the text block with `%%% \n`
+            and end the text block with `\n %%%`.
+
             Use `msg_text` with the Datadog Ruby library.'
           example: Oh boy!
           maxLength: 4000
@@ -7969,7 +7972,7 @@ components:
       - DOUBLE
     TimeseriesWidgetDefinition:
       description: The timeseries visualization allows you to display the evolution
-        of one or more metrics, log events, or Indexed Spans over time.
+        of one or more metrics, log events, or Analyzed Spans over time.
       properties:
         custom_links:
           description: List of custom links.
@@ -8872,7 +8875,7 @@ components:
           format: int64
           type: integer
         trace_search_indexed_events_count_sum:
-          description: Shows the sum of all Indexed Spans indexed over all hours
+          description: Shows the sum of all analyzed spans indexed over all hours
             in the current date for all organizations.
           format: int64
           type: integer
@@ -9005,7 +9008,7 @@ components:
           format: int64
           type: integer
         trace_search_indexed_events_count_sum:
-          description: Shows the sum of all Indexed Spans indexed over all hours
+          description: Shows the sum of all analyzed spans indexed over all hours
             in the current date for the given org.
           format: int64
           type: integer
@@ -9159,7 +9162,7 @@ components:
           format: int64
           type: integer
         trace_search_indexed_events_count_agg_sum:
-          description: Shows the sum of all Indexed Spans indexed over all hours
+          description: Shows the sum of all analyzed spans indexed over all hours
             in the current month(s) for all organizations.
           format: int64
           type: integer
@@ -9308,7 +9311,7 @@ components:
           format: date-time
           type: string
         indexed_events_count:
-          description: Contains the number of Indexed Spans indexed.
+          description: Contains the number of Analyzed Spans indexed.
           format: int64
           type: integer
       type: object
